@@ -1,3 +1,3 @@
-# Lab 02: Julia Basics
+# Lab 06: Policy Seach
 
-This is a placeholder for the lab.
+See [index.qmd](index.qmd)
