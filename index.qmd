@@ -169,14 +169,14 @@ _ = HouseElevation.run_sim_old(a, sow, p)
 ```
 
 This makes our function a lot faster to run!
-We only have to evalute our function about 150 times per year, rather than 10000.
+We only have to evaluate our function about 150 times per year, rather than 10000.
 
 ## Metaheuristics.jl
 
 We are attempting to solve a single-objective optimization problem that is likely nonlinear and nonconvex.
 We will use the [Metaheuristics.jl](https://jmejia8.github.io/Metaheuristics.jl/stable/) package to do this.
 This package implements a number of optimization algorithms, including genetic algorithms, that are well-suited to this type of problem.
-Let's follow a a quick overview from [the docs](https://jmejia8.github.io/Metaheuristics.jl/stable/).
+Let's follow a quick overview from [the docs](https://jmejia8.github.io/Metaheuristics.jl/stable/).
 
 Let's say we want to minimize the following function:
 $$
@@ -201,7 +201,7 @@ end
 ```
 
 Let's minimize it with $D=10$.
-We need to define bounds of the optimization, which constrains the search space for the decisino variable.
+We need to define bounds of the optimization, which constrains the search space for the decision variable.
 
 ```{julia}
 D = 10
@@ -265,7 +265,7 @@ result = optimize(f, bounds, algorithm)
 
 ## Set up caching
 
-You'll want to `pip install jupyter-cache` and then make sure you have caching enabled for this one, since some of the comnputations are a bit slow and you don't want to have to re-run them every time you open VS Code.
+You'll want to `pip install jupyter-cache` and then make sure you have caching enabled for this one, since some of the computations are a bit slow and you don't want to have to re-run them every time you open VS Code.
 
 ## Explore
 
@@ -308,5 +308,5 @@ We'll keep the number of SOWs used for optimization relatively small, and then w
 Conclude your analysis by reflecting on the following questions
 
 1. How are we framing this problem? What are the decision variables, the objective function, and the states of the world over which we optimize?
-1. Diggning deeper, we are averaging the objective function computed over a finite number of states of the world. This assumes that they are all drawn from a distribution representing the "true" distribution of states of the world. Is this a good assumption?
+1. Digging deeper, we are averaging the objective function computed over a finite number of states of the world. This assumes that they are all drawn from a distribution representing the "true" distribution of states of the world. Is this a good assumption?
 1. What's not being considered in this analysis that might be important?
