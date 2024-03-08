@@ -51,7 +51,7 @@ Plots.default(; margin=5Plots.mm)
 ```
 
 ```{julia}
-function objective_function(a::AbstractFloat)
+function objective_function(a::AbstractVector{<:AbstractFloat})
     return true # PLACEHOLDER
 end
 ```
